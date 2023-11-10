@@ -12,7 +12,7 @@ Post requests are made on endpoint '/reservation'
 The body of your request will be in format:
 ```json
 {
-  "product_id": 05,
+  "product_id": 5,
   "quantity": 1
 }
 ```
@@ -37,7 +37,7 @@ Get requests are made on endpoint '/distribution/{reservation_id}'
 ```json
 {
   "exists": true,
-  "product_id": 05,
+  "product_id": 5,
   "quantity": 1
 }
 ```
