@@ -12,7 +12,7 @@ Post requests are made on endpoint '/reservation'
 The body of your request will be in format:
 ```json
 {
-  "product_id": "05",
+  "product_id": 05,
   "quantity": 1
 }
 ```
