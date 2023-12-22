@@ -1,6 +1,7 @@
 import uuid
 from flask import Flask, request, jsonify
 import sqlite
+import qrcode
 
 app = Flask(__name__)
 
@@ -21,6 +22,9 @@ def create_reservation():
 
     sqlite.create(reservation_id, data["product_id"], data["quantity"])
     print(sqlite.get_all())
+
+    qr = qrcode.make(reservation_id)
+    qr.save('qrcode.png')
 
     return jsonify({'reservation_id': reservation_id}), 201
 
